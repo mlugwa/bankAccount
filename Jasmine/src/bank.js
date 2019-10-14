@@ -56,13 +56,13 @@ class Bank{
 
 }
 
-var acc = new Bank();
+/*var acc = new Bank();
 acc.accountManager(5000,12,50,654321);
 acc.accountManager(10000,12,50,123456);
 acc.transfer(123456,654321,500);
 
 console.log(acc.accounts[0].bankAccount.balance);
 console.log(acc.accounts[1].bankAccount.balance);
-
+*/
 
 

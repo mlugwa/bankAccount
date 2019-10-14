@@ -58,15 +58,13 @@ class Bank{
 
 }
 
-var acc = new Bank();
+/*var acc = new Bank();
 acc.accountManager(5000,12,50,654321);	//First account pushed into accounts array
 acc.accountManager(10000,12,50,123456); //Second account pushed into accounts array
 acc.transfer(123456,654321,50);	//Transfer of 50 bucks made from account two to account one
 
 console.log(acc.accounts[0].bankAccount.balance);	//For some reason this prints out account two instad of one???
 console.log(acc.accounts[1].bankAccount.balance);	//For some other reason this doesn't print at all. It's undefined.
-
-//console.log(acc.bankAccount.balance);
-//console.log(acc2.bankAccount.balance);
+*/
 
 

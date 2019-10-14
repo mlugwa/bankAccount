@@ -1,19 +1,17 @@
 var BankAccount = require('./bankAccount.js');
 
 class Bank{
-	constructor(balance,interestRate,bankFee,accNumber)
+	constructor()
 	{
-		this.bankAccount = new BankAccount(balance,interestRate,bankFee);
-		this.accNumber = accNumber;
 		this.accounts = [];
-//		this.accounts.push({accountNumber:this.accNumber,bankAccount: this.bankAccount});
+		//This is a Bank constructor, a bank simply needs to handle bankAccounts.
+		//The array declared above handles multiple accounts pushed to it by an accountManager() method.
 	}
 
 	accountManager(balance,interestRate,bankFee,accNumber)
 	{
 		this.bankAccount = new BankAccount(balance,interestRate,bankFee);
 		this.accNumber = accNumber;
-//		this.accounts = [];
 		this.accounts.push({accountNumber:this.accNumber,bankAccount: this.bankAccount});
 	}
 
@@ -58,13 +56,13 @@ class Bank{
 
 }
 
-/*var acc = new Bank();
-acc.accountManager(5000,12,50,654321);	//First account pushed into accounts array
-acc.accountManager(10000,12,50,123456); //Second account pushed into accounts array
-acc.transfer(123456,654321,50);	//Transfer of 50 bucks made from account two to account one
+var acc = new Bank();
+acc.accountManager(5000,12,50,654321);
+acc.accountManager(10000,12,50,123456);
+acc.transfer(123456,654321,500);
 
-console.log(acc.accounts[0].bankAccount.balance);	//For some reason this prints out account two instad of one???
-console.log(acc.accounts[1].bankAccount.balance);	//For some other reason this doesn't print at all. It's undefined.
-*/
+console.log(acc.accounts[0].bankAccount.balance);
+console.log(acc.accounts[1].bankAccount.balance);
+
 
 
